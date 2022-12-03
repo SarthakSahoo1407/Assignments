@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>ROCK PAPER SCISSORS</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        width: 50%;
+        height: 50vmax;
+        background-color: #DEF5E5;
+      }
+
+      h1 {
+        text-align: center;
+        transition: 5ms;
+      }
+
+      button{
+        height: 10vmax;
+        width: 10vmax;
+        margin-left:4.5vmax;
+        padding: 1vmax;
+        font-size: 2vh;
+        border: 3px solid #678f80;
+        border-radius: 5px;
+        background-color: #BCEAD5;
+        color: white;
+        text-shadow: 1px 2px #648c7d;
+        transition: 0.8s;
+      }
+
+      button:hover{
+        background-color: #8EC3B0;
+
+      }
+
+      img{
+        height: 10vmax;
+        width: 10vmax;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      .row{
+        background-color: #52685e;
+        text-align: center;
+        border: 1px solid #8EC3B0;
+        border-collapse: collapse;
+        color: rgb(240, 240, 240);
+        text-shadow: 1px 2px #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>ROCK PAPER SCISSOR</h1>
+      <h1>You V/s Comp</h1>
+      <div class="row1">
+        <div>
+          <button id="rock">ROCK</button>
+          <button id="paper">PAPER</button>
+          <button id="scissors">SCISSOR</button>
+        </div>
+      </div><br>
+      <div class="row">
+        <div>
+          <h3 id="you">YOU: 0 </h3>
+          <h3 id="comp">Comp: 0 </h3>
+          <h3 id="tie">Tie: 0</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="result">
+          <h3 id="a">RESULTS</h3>
+        </div>
+        <div class="userPlay">
+          <h3 id="u">YOU:</h3>
+        </div>
+        <div class="compPlay">
+          <h3 id="c">COMP:</h3>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    $(document).ready(function () {
+      var user_score = 0;
+      var comp_score = 0;
+      var tie = 0;
+      function playGame(userInput) {
+        var compSelection = getCompPlay();
+
+        $("#userPlay").removeClass("ROCK PAPER SCISSORS winner");
+        $("#userPlay").addClass(userInput);
+
+        $("#compPlay").removeClass("ROCK PAPER SCISSORS winner");
+        $("#compPlay").addClass(userInput);
+
+        if (userInput == "ROCK" && compSelection == "PAPER") {
+          $("#compPlay").addClass("winner");
+          $("#a").html("<h4>COMP +1 </h4>");
+
+          comp_score++;
+        } else if (userInput == "ROCK" && compSelection == "SCISSORS") {
+          $("#userPlay").addClass("winner");
+          $("#a").html("<h4>YOU +1 </h4>");
+
+          user_score++;
+        } else if (userInput == "SCISSORS" && compSelection == "ROCK") {
+          $("#compPlay").addClass("winner");
+          $("#a").html("<h4>COMP +1 </h4>");
+
+          comp_score++;
+        } else if (userInput == "SCISSORS" && compSelection == "PAPER") {
+          $("#userPlay").addClass("winner");
+          $("#a").html("<h4>YOU +1 </h4>");
+          user_score++;
+        } else if (userInput == "PAPER" && compSelection == "SCISSORS") {
+          $("#compPlay").addClass("winner");
+          $("#a").html("<h4>COMP +1 </h4>");
+
+          comp_score++;
+        } else if (userInput == "PAPER" && compSelection == "ROCK") {
+          $("#userPlay").addClass("winner");
+          $("#a").html("<h4>YOU +1 </h4>");
+
+          user_score++;
+        } else {
+          console.log("Tie");
+          $("#a").html("<h4>ITS A TIE</h4>");
+
+          tie++;
+        }
+
+        $("#you").html(
+          "YOU: " + user_score
+        );
+        $("#comp").html(
+          "Comp: " + comp_score
+        );
+        $("#tie").html(
+          "Ties: " + tie
+        );
+        $("#u").html("<h4>YOU:" + userInput + "</h4>");
+
+        $("#c").html("<h4>COMP:" + compSelection + "</h4>");
+      }
+      function getCompPlay() {
+        var compList = ["ROCK", "PAPER", "SCISSORS"];
+
+        var compPlay = compList[Math.floor(compList.length * Math.random())];
+
+        return compPlay;
+      }
+
+      $("#rock").click(function () {
+        playGame("ROCK");
+      });
+      $("#paper").click(function () {
+        playGame("PAPER");
+      });
+      $("#scissors").click(function () {
+        playGame("SCISSORS");
+      });
+    });
+  </script>
+</html>

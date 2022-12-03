@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blur</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  </head>
+  <body>
+    <form>
+      <input id="field1" type="text" value="Field 1" /><br>
+      <input id="field2" type="text" value="Field 2" />
+    </form>
+  </body>
+  <script>
+    $(document).ready(function(){
+        $("#field1").blur(function(){
+            $(this).hide(550);
+        });
+    });
+  </script>
+</html>

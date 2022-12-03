@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+
+        tr,
+        th,
+        td {
+            border: 2px solid black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="flip">Click to slide the panel down or up</div>
+    <div id="panel">
+        <br />
+        <span>Search by FirstName, LastName or Email</span>
+        <input id="myInput" class="fortextbox" type="text" placeholder="Search.." />
+        <br /><br /><br />
+
+        <table>
+            <thead>
+                <tr>
+                    <th>JOB CATEGORY</th>
+                    <th>JOBS</th>
+                    <th>AVAILABILTY</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Administration, business and management</td>
+                    <td>Administrator</td>
+                    <td>08</td>
+                </tr>
+                <tr>
+                    <td>Administration, business and management</td>
+                    <td>Business analyst</td>
+                    <td>07</td>
+                </tr>
+                <tr>
+                    <td>Administration, business and management</td>
+                    <td>Car rental agent</td>
+                    <td>02</td>
+                </tr>
+                <tr>
+                    <td>Administration, business and management</td>
+                    <td>Secretary</td>
+                    <td>04</td>
+                </tr>
+                <tr>
+                    <td>Administration, business and management</td>
+                    <td>Trade union official</td>
+                    <td>05</td>
+                </tr>
+                <tr>
+                    <td>Alternative therapies</td>
+                    <td>Naturopath</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Alternative therapies</td>
+                    <td> Osteopath</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Alternative therapies</td>
+                    <td> Reflexologist</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Alternative therapies</td>
+                    <td>Hypnotherapist</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Alternative therapies</td>
+                    <td>Acupuncturist</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Animals, land and environment</td>
+                    <td>Agricultural consultant</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Animals, land and environment</td>
+                    <td>Agricultural engineer</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Animals, land and environment</td>
+                    <td>Cemetery worker</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Animals, land and environment</td>
+                    <td>Climate Scientist</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Animals, land and environment</td>
+                    <td>Environmental consultant</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Computing and ICT</td>
+                    <td>App developer</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Computing and ICT</td>
+                    <td>Audio-visual technician</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Computing and ICT</td>
+                    <td>Ethical hacker</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Computing and ICT</td>
+                    <td>Games developer</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Computing and ICT</td>
+                    <td>Game designer</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Construction and building</td>
+                    <td>Architect</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Construction and building</td>
+                    <td>Architectural technician</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Construction and building</td>
+                    <td>Architectural technologist</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Construction and building</td>
+                    <td>Building surveyor</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Construction and building</td>
+                    <td>Building technician</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Design, arts and crafts </td>
+                    <td>Animator</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Design, arts and crafts </td>
+                    <td>Blacksmith</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Design, arts and crafts </td>
+                    <td>Dressmaker</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Design, arts and crafts </td>
+                    <td>Fashion designer</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Design, arts and crafts </td>
+                    <td>Graphic designer</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Education and training </td>
+                    <td>Teacher- Primary School</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Education and training </td>
+                    <td>Teacher- Secondary School</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Education and training </td>
+                    <td>Training manager</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Education and training </td>
+                    <td>Literacies tutor</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Education and training </td>
+                    <td>Learning technologist</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Engineering</td>
+                    <td>Aerospace engineer</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Engineering</td>
+                    <td>Automotive engineer</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Engineering</td>
+                    <td>Electrical engineer</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Engineering</td>
+                    <td>Chemical engineer</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Engineering</td>
+                    <td>Design engineer</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Financial services</td>
+                    <td>Financial adviser</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Financial services</td>
+                    <td>Insurance broker</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Financial services</td>
+                    <td>Credit manager</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Financial services</td>
+                    <td>Actuary</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Financial services</td>
+                    <td>Accountant- Management</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Garage services </td>
+                    <td>Tyre or exhaust fitter</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Garage services </td>
+                    <td>Roadside technician</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Garage services </td>
+                    <td>Mechanic</td>
+                    <td></td>v
+                </tr>
+                <tr>
+                    <td>Garage services </td>
+                    <td>Cycle mechanic</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Garage services </td>
+                    <td>Car valet</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br />
+    </div>
+
+
+
+    </table>
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#flip").click(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                }
+            });
+        });
+</script>
+
+</html>

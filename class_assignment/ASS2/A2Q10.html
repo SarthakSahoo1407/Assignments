@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      form {
+        border: 3px solid #f1f1f1;
+      }
+
+      h2 {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        text-align: center;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      input[type="number"] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #04aa6d;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      button:hover {
+        opacity: 0.8;
+      }
+
+
+      .imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+      }
+
+      .container {
+        padding: 16px;
+      }
+
+      
+    </style>
+  </head>
+
+  <body>
+    <h2>Login Form</h2>
+
+    <form>
+      <div class="imgcontainer">
+        <img
+          src="https://images.squarespace-cdn.com/content/v1/57713a8e2994cae381dd86fe/1510405002757-FP2W9HV8ZA0HP2IF3O6A/SOA-PNG.png"
+          alt="Avatar"
+          class="avatar"
+          height="100"
+          width="100"
+        />
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required />
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Email" name="email" required />
+
+        <label for="mob"><b>Mobile Number</b></label>
+        <input type="text" placeholder="Mobile Number" name="mob" required />
+        <br />
+
+        <label for="gender"><b>Gender</b></label
+        ><br />
+        <input for="male" type="radio" name="male" required />Male
+        <input for="female" type="radio" name="male" required />Female
+        <br />
+        <br />
+        <label for="psw"><b>Password</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          required
+         required
+            pattern="(?=.*\d)(?=.* 
+     [a-z])(?=.*?[0-9])(?=.*?[~`!@#$%\^&*()\-_=+[\]{};:\x27.,\x22\\|/?>]).{4,}"
+        />
+
+        <button type="submit">Sign Up</button>
+      </div>
+    </form>-0
+  </body>
+</html>

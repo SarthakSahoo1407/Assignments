@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+    <style>
+        h2{
+            text-align: center;
+        }
+        input[type="text"]{
+            height: 30px;
+            width: 250px;
+            border: 2px solid black;
+        }
+        select{
+            height: 36px;
+            width: 300;
+            border: 2px solid black;
+        }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td,
+        th {
+            border: 1px solid #000000;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #afc8c7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Job Filter Table</h2>
+    <input id="myInput" type="text" placeholder="Search..">
+    <br><br>
+    <table>
+        <thead>
+            <tr>
+                <th>Job Category</th>
+                <th>JobS</th>
+                <th>Vacancy</th>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            <tr>
+                <td>Administration, business and management</td>
+                <td>Administrator</td>
+                <td>08</td>
+            </tr>
+            <tr>
+                <td>Administration, business and management</td>
+                <td>Business analyst</td>
+                <td>07</td>
+            </tr>
+            <tr>
+                <td>Administration, business and management</td>
+                <td>Car rental agent</td>
+                <td>02</td>
+            </tr>
+            <tr>
+                <td>Administration, business and management</td>
+                <td>Secretary</td>
+                <td>04</td>
+            </tr>
+            <tr>
+                <td>Administration, business and management</td>
+                <td>Trade union official</td>
+                <td>05</td>
+            </tr>
+            <tr>
+                <td>Alternative therapies</td>
+                <td>Naturopath</td>
+                <td>09</td>
+            </tr>
+            <tr>
+                <td>Alternative therapies</td>
+                <td> Osteopath</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td>Alternative therapies</td>
+                <td> Reflexologist</td>
+                <td>07</td>
+            </tr>
+            <tr>
+                <td>Alternative therapies</td>
+                <td>Hypnotherapist</td>
+                <td>09</td>
+            </tr>
+            <tr>
+                <td>Alternative therapies</td>
+                <td>Acupuncturist</td>
+                <td>05</td>
+            </tr>
+            <tr>
+                <td>Animals, land and environment</td>
+                <td>Agricultural consultant</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Animals, land and environment</td>
+                <td>Agricultural engineer</td>
+                <td>05</td>
+            </tr>
+            <tr>
+                <td>Animals, land and environment</td>
+                <td>Cemetery worker</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>Animals, land and environment</td>
+                <td>Climate Scientist</td>
+                <td>05</td>
+            </tr>
+            <tr>
+                <td>Animals, land and environment</td>
+                <td>Environmental consultant</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Computing and ICT</td>
+                <td>App developer</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>Computing and ICT</td>
+                <td>Audio-visual technician</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>Computing and ICT</td>
+                <td>Ethical hacker</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Computing and ICT</td>
+                <td>Games developer</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td>Computing and ICT</td>
+                <td>Game designer</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Construction and building</td>
+                <td>Architect</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>Construction and building</td>
+                <td>Architectural technician</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Construction and building</td>
+                <td>Architectural technologist</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>Construction and building</td>
+                <td>Building surveyor</td>
+                <td>55</td>
+            </tr>
+            <tr>
+                <td>Construction and building</td>
+                <td>Building technician</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Design, arts and crafts </td>
+                <td>Animator</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Design, arts and crafts </td>
+                <td>Blacksmith</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Design, arts and crafts </td>
+                <td>Dressmaker</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Design, arts and crafts </td>
+                <td>Fashion designer</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>Design, arts and crafts </td>
+                <td>Graphic designer</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>Education and training </td>
+                <td>Teacher- Primary School</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>Education and training </td>
+                <td>Teacher- Secondary School</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>Education and training </td>
+                <td>Training manager</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Education and training </td>
+                <td>Literacies tutor</td>
+                <td>05</td>
+            </tr>
+            <tr>
+                <td>Engineering</td>
+                <td>Automotive engineer</td>
+                <td>151</td>
+            </tr>
+            <tr>
+                <td>Garage services </td>
+                <td>Car valet</td>
+                <td>24</td>
+            </tr>
+                <td>Education and training </td>
+                <td>Learning technologist</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>Engineering</td>
+                <td>Aerospace engineer</td>
+                <td>05</td>
+            </tr>
+            <tr>
+            <tr>
+                <td>Engineering</td>
+                <td>Electrical engineer</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>Engineering</td>
+                <td>Chemical engineer</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Engineering</td>
+                <td>Design engineer</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>Financial services</td>
+                <td>Financial adviser</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Financial services</td>
+                <td>Insurance broker</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Financial services</td>
+                <td>Credit manager</td>
+                <td>09</td>
+            </tr>
+            <tr>
+                <td>Financial services</td>
+                <td>Actuary</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>Financial services</td>
+                <td>Accountant- Management</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>Garage services </td>
+                <td>Mechanic</td>
+                <td>05</td>v
+            </tr>
+            <tr>
+                <td>Garage services </td>
+                <td>Tyre or exhaust fitter</td>
+                <td>05</td>
+            </tr>
+            <tr>
+                <td>Garage services </td>
+                <td>Roadside technician</td>
+                <td>09</td>
+            </tr>
+            <tr>
+                <td>Garage services </td>
+                <td>Cycle mechanic</td>
+                <td>24</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

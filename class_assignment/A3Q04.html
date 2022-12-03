@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+      div.alert{
+        display: none;
+        height: 300px;
+        width: 400px;
+        text-align: center;
+        padding-top: 10%;
+        background-color: red;
+        color: white;
+        font-size: 32px;
+
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      UserName:
+      <input type="text" id="name" placeholder="Username" />
+      <br>
+      Password:
+      <input type="password" id="pwd" placeholder="Password" /><br>
+      <button>Submit</button>
+
+    </form>
+    <div class="alert">
+      <p>ALERT!!</p>
+      <p>Field must be filled!!<p>
+    </div>
+  </body>
+  <script>
+      $(document).ready(function(){
+        $("(button").click(function(){
+          if($("#name")===null||$("name")!=" "){
+            $(".alert").css("display","block");
+          }
+          else{
+            alert("submit")
+          } 
+        });
+
+      });
+  </script>
+</html>

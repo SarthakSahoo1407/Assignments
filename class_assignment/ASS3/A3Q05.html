@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <img src="https://static.vecteezy.com/system/resources/previews/004/409/781/non_2x/technology-blue-background-free-vector.jpg"
+        alt="" width="100%" height="50px" />
+    <h1 style="text-align: center">THIS IS A HEADING</h1>
+    <p1 style="background-color: aqua; border-radius: 08px">Click to hide heading</p1>
+    <br />
+    <br />
+    <p2 style="background-color: aqua; border-radius: 8px">Click to show heading with underline</p2>
+    <br />
+    <br />
+    <p3 style="background-color: aqua; border-radius: 8px">Enter/leave mouse to see change</p3>
+    <br /><br />
+    <p4 style="background-color: aqua; border-radius:  c8px">SlideUp or SlideDown the Actions</p4>
+    <br /><br />
+    <p5 style="background-color: aqua; border-radius: 8px">Animate the Actions</p5>
+    <br><br>
+    <p6 style="background-color: aqua; border-radius: 8px">Increase height of image</p6>
+    <br><br>
+    <p7 style="background-color: aqua; border-radius: 8px">Change the heading</p7>
+
+    <br />
+
+</body>
+<script>
+    $(document).ready(function () {
+        $("p1").click(function () {
+            $("h1").hide();
+        });
+        $("p2").click(function () {
+            $("h1").show();
+            $("h1").css("text-decoration", "underline");
+        });
+        $("p3").mouseenter(function () {
+            $("p1,p2,p3,p4,p5,p6,p7").css("background-color", "red");
+        });
+        $("p3").mouseleave(function () {
+            $("p1,p2,p3,p4,p5,p6,p7").css("background-color", "aqua");
+        });
+        $("p4").click(function () {
+            $("p1,p2,p3,p5,p6,p7").slideUp();
+        });
+        $("p4").dblclick(function () {
+            $("p1,p2,p3 ,p5,p6,p7").slideDown();
+        });
+
+        $("p5").click(function () {
+            $("p1,p2,p3,p4,p5,p6,p7").animate(
+                {
+                    fontSize: "40px",
+                },
+                "slow"
+            );
+        });
+        $("p6").click(function () {
+            $("img").attr("height", "100px");
+        });
+        $("p7").click(function () {
+            $("h1").html("<b>The heading has been <em>changed<em></b>");
+        });
+    });
+</script>
+
+</html>

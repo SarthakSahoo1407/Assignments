@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <title>registration form</title>
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        background-color: tan;
+      }
+      div {
+        display: flex;
+        justify-content: center;
+      }
+      table {
+        display: table;
+        justify-content: center;
+        border: 2px solid;
+        background-color: white;
+      }
+      h2 {
+        text-align: center;
+      }
+      table tr td {
+        padding: 4px 4px 4px 4px;
+      }
+      input[type="submit"]{
+        background-color: #04aa6d;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <h2>Registration form</h2>
+
+  <form>
+    <div>
+      <table>
+        <tbody>
+          <tr>
+            <td><label for="id">Id: </label></td>
+            <td><input id="id" maxlength="50" name="name" type="text" /></td>
+          </tr>
+
+          <tr>
+            <td><label for="name">Name: </label></td>
+            <td><input id="name" maxlength="50" name="name" type="text" /></td>
+          </tr>
+
+          <tr>
+            <td><label for="course">Course: </label></td>
+            <td>
+              <input id="course" maxlength="50" name="course" type="text" />
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="branch">Branch: </label></td>
+            <td>
+              <select name="select" id="branch">
+                <option value="CSE">Cse</option>
+                <option value="Csit">Csit</option>
+                <option value="Civil">Civil</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="rolln0">Rollno: </label></td>
+            <td>
+              <input id="rollno" maxlength="50" name="rollno" type="text" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="Gender">Gender </label></td>
+            <td>
+              <input type="radio" name="gender" id="male" /><label for="male"
+                >Male</label
+              >
+              <input type="radio" name="gender" id="female" /><label
+                for="female"
+                >Female</label
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="email">Email_Address:</label></td>
+            <td>
+              <input id="email" maxlength="50" name="email" type="text" />
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="username">User_Name:</label></td>
+            <td>
+              <input id="username" maxlength="50" name="username" type="text" />
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="password">Password:</label></td>
+            <td>
+              <input
+                id="password"
+                maxlength="50"
+                name="password"
+                type="password"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td><input name="Submit" type="Submit" value="Submit" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </form>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        table{
+            font-size: 24x;
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        tr,th,td{
+            border: 2px solid black;           
+        }
+    </style>
+</head>
+<body>
+    <h1 id="head">MULTIPLICATION</h1>
+    <table id="table">
+        <tr id="r0">
+            <th id="h1">39's</th>
+            <th id="h2">Count</th>
+            <th id="h3">result</th>
+        </tr>       
+    </table>
+    <button id="btn1">Click to Add row of 39's table</button>
+    <br>    
+    <button id="btn2">Change the color of Text</button>
+    <br>
+    <p id="p">Remove Element</p>
+    <input type="text" name="input" id="input"/>
+    <br>
+    <button id="btn3">Remove the Element</button>
+
+</body>
+
+<script>
+    var a=1;
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            var b = 39*a;
+            $("#table").append("<tr><td>39</td><td>"+a+"</td><td>"+b+"</td></tr>")
+            a++;
+        });
+        $("#btn2").click(function(){
+            $("tr").css("color","red");
+        });
+        $("#btn3").click(function(){
+            var val = $("#input").val();
+            $("#"+val).remove();
+        });
+    });
+</script>
+</html>
