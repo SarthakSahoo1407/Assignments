@@ -1,0 +1,41 @@
+#include <Servo.h>
+
+const int trigPin = 9;
+const int echoPin = 10;
+const int servoPin = 11;
+
+Servo servo;
+
+void setup() {
+  servo.attach(servoPin);
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+}
+
+void loop() {
+  long duration, distance;
+  
+  // Trigger the ultrasonic sensor
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  // Read the echo pulse
+  duration = pulseIn(echoPin, HIGH);
+
+  // Calculate the distance based on the speed of sound
+  distance = duration / 2 / 29.1;
+
+  // Use the distance to control the servo
+  if (distance < 10) {
+    servo.write(0);
+  } else if (distance > 180) {
+    servo.write(180);
+  } else {
+    servo.write(distance);
+  }
+
+  delay(50);
+}
